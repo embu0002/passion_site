@@ -1,0 +1,50 @@
+.grid_flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+.grid_flex img {
+  width: 100%;
+  object-fit: cover;
+  align-self: stretch;
+}
+
+@media (min-width: 600px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    margin-inline: 2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .grid_flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    margin-inline: 2rem;
+  }
+
+  .billede4 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .elvira_billede {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .billede5,
+  .billede6 {
+    width: 48%;
+  }
+
+  .hero_section {
+    margin-inline: 2rem;
+  }
+}

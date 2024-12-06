@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  margin-inline: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100;
+  height: auto;
+}
+main {
+  background-color: #89937c;
+}
+body {
+  background-color: #89937c;
+}
+
+footer {
+  background-color: #5a352a;
+  padding: 5%;
+}
+
+.Overskrift_påtekst {
+  margin-left: -1%;
+  font-size: 36px;
+  font-family: "Asset", serif;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .grid_1-1_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 203px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-inline: 14rem;
+  }
+}
+
+/******* Billeder *******/
+.billede1 {
+  width: 100vw;
+  margin-top: 2rem;
+}
+.billede2 {
+  width: 100vw;
+}
+.elvira_billede {
+  width: 50%;
+}
+
+/******* Tekst *******/
+h1 {
+  margin-bottom: 0.8rem;
+  font-family: "Funnel Sans", sans-serif;
+}
+.h2_1 {
+  margin-bottom: 0.8rem;
+  font-family: "Funnel Sans", sans-serif;
+}
+.h2_2 {
+  font-family: "Funnel Sans", sans-serif;
+  margin-bottom: -2.8rem;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+}
+.tekst_elviraflow {
+  margin-top: 1.5rem;
+}
+/***************** computerstørrelse ****************/
+@media (min-width: 600px) {
+  .h2_1 {
+    margin-left: 2.1rem;
+  }
+  .h2_2 {
+    margin-left: 2.1rem;
+  }
+  .billede1 {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .billede2 {
+    width: 100%;
+  }
+  .video1 {
+    width: 100%;
+  }
+}
+
+/**************** Lottiefile **************/
+
+.hero_section {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.billede1 {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.6;
+  height: auto;
+  object-fit: cover;
+}
+
+.lottie_file {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.video_passion {
+  width: 100%;
+}
+
+/********** Menu *********/
+.navbar {
+  background-color: #5a352a;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-family: "Funnel Sans", sans-serif;
+  font-variation-settings: "wght" 500;
+  letter-spacing: -1px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  padding: 1rem;
+}
+
+.nav-links li {
+  margin-bottom: 1rem;
+}
+
+.nav-links a {
+  font-family: "Funnel Sans", sans-serif;
+  font-weight: bolder;
+  color: black;
+  stroke: black 1px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+  padding: 10px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  opacity: 0.7;
+}
+
+.burger {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Active state for mobile menu */
+.nav-active {
+  display: block;
+}
+
+.nav-active li {
+  opacity: 1;
+  animation: navLinkFade 0.5s ease forwards;
+}
+
+/* Burger menu animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  color: black;
+}
+
+.toggle .line2 {
+  opacity: 0;
+  color: black;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Keyframe animation for nav links */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1000px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin-bottom: 0;
+  }
+
+  .burger {
+    display: none;
+  }
+}
